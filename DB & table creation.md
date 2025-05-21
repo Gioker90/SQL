@@ -39,4 +39,10 @@ VALUES
 '1979-03-17', 'Female', 'Human Resources Manager', 'HR', '2023-08-01')
 --other 48 employees data
 ````
-Now I'll use
+Now I'll use `Select` to explore the result
+````sql
+SELECT*
+FROM HC
+````
+and this will be the result
+![Screenshot 2025-05-21 200838](https://github.com/user-attachments/assets/325233a6-45e6-4bce-8c50-5ecdce4f492b)
