@@ -1,4 +1,4 @@
-# Database and Table creation
+# Database and Table creatio
 #### Task: I want to create a databse containing the data of 52 employees of an hypothetical company; I want the data to have certain characteristics, so that I could perform some data analysis on them: every employee needs to have a uniqe ID, Name, work start date, if they lived the company, salary, birth date, gender, job role, deparment and termination date
 
 In order to do that I will create a db, using `create db` anc calling it "HR"
