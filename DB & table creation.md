@@ -1,5 +1,5 @@
-# Database and Table creatio
-#### Task: I want to create a databse containing the data of 52 employees of an hypothetical company; I want the data to have certain characteristics, so that I could perform some data analysis on them: every employee needs to have a uniqe ID, Name, work start date, if they lived the company, salary, birth date, gender, job role, deparment and termination date
+# Database and Table creation
+#### Task: I want to create a databse containing the data of 52 employees of an hypothetical company; I want the data to have certain characteristics, so that I could perform some insightful analysis on them: every employee needs to have a uniqe ID, Name, work start date, if they lived the company, salary, birth date, gender, job role, deparment and termination date
 
 In order to do that I will create a db, using `create db` anc calling it "HR"
 ```sql
@@ -46,3 +46,5 @@ FROM HC
 ````
 and this will be the result
 ![Screenshot 2025-05-21 200838](https://github.com/user-attachments/assets/325233a6-45e6-4bce-8c50-5ecdce4f492b)
+
+Data are ready to be analyzed!
