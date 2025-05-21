@@ -1,11 +1,11 @@
 # Database and Table creation
 #### Task: I want to create a databse containing the data of 52 employees of an hypothetical company; I want the data to have certain characteristics, so that I could perform some insightful analysis on them: every employee needs to have a uniqe ID, Name, work start date, if they lived the company, salary, birth date, gender, job role, deparment and termination date
 
-In order to do that I will create a db, using `create db` anc calling it "HR"
+In order to do that I will create a db, using `CREATE DB` anc calling it "HR"
 ```sql
 create db HR
 ```
-therefore I will use `create table` to define the type of data I want
+therefore I will use `CREATE TABLE` to define the type of data I want
 ````sql
 create TABLE HC (
 ID int not null, 
@@ -23,7 +23,7 @@ ID int not null,
 	Primary key (ID)
    )
 ````
-Now I need to fill the table with data. To do that, I'll leverage AI to give me realistic data, specifing I want the termination dates only filled in the 7% of the employees (meaning the rest it's still in the company) - I then paste them with `insert into` as follows
+Now I need to fill the table with data. To do that, I'll leverage AI to give me realistic data, specifing I want the termination dates only filled in the 7% of the employees (meaning the rest it's still in the company) - I then paste them with `INSERT INTO` as follows
 ````sql
 INSERT INTO HC (ID, First_Name, Last_Name, Location, start_date, 
 attrition, Salary, birth_date, gender, job_role, department, 
@@ -39,7 +39,7 @@ VALUES
 '1979-03-17', 'Female', 'Human Resources Manager', 'HR', '2023-08-01')
 --other 48 employees data
 ````
-Now I'll use `Select` to explore the result
+Now I'll use `SELECT` to explore the result
 ````sql
 SELECT*
 FROM HC
