@@ -5,7 +5,7 @@ In order to do that I will create a db, using `CREATE DATABASE` anc calling it "
 ```sql
 CREATE DATABASE HR
 ```
-therefore I will use `CREATE TABLE` to define the type of data I want
+Thereafter, I will use `CREATE TABLE` to define the type of data I want
 ````sql
 CREATE TABLE HC (
 ID int not null, 
@@ -41,7 +41,7 @@ VALUES
 ````
 Now I'll use `SELECT` to explore the result
 ````sql
-SELECT*
+SELECT *
 FROM HC
 ````
 and this will be the result
