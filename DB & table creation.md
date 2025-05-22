@@ -1,13 +1,13 @@
 # Database and Table creation
 #### Task: I want to create a databse containing the data of 52 employees of an hypothetical company; I want the data to have certain characteristics, so that I could perform some insightful analysis on them: every employee needs to have a uniqe ID, Name, work start date, if they lived the company, salary, birth date, gender, job role, deparment and termination date
 
-In order to do that I will create a db, using `CREATE DB` anc calling it "HR"
+In order to do that I will create a db, using `CREATE DATABASE` anc calling it "HR"
 ```sql
-create db HR
+CREATE DATABASE HR
 ```
 therefore I will use `CREATE TABLE` to define the type of data I want
 ````sql
-create TABLE HC (
+CREATE TABLE HC (
 ID int not null, 
 	First_Name varchar(50), 
 	Last_Name varchar(50), 
@@ -23,7 +23,7 @@ ID int not null,
 	Primary key (ID)
    )
 ````
-Now I need to fill the table with data. To do that, I'll leverage AI to give me realistic data, specifing I want the termination dates only filled in the 7% of the employees (meaning the rest it's still in the company) - I then paste them with `INSERT INTO` as follows
+Now I need to fill the table with data. To do that, I'll leverage AI to give me realistic data, specifing I want the termination dates only filled in the 7% of the employees (meaning the rest of the employees it's still in the company) - I then paste them with `INSERT INTO` as follows
 ````sql
 INSERT INTO HC (ID, First_Name, Last_Name, Location, start_date, 
 attrition, Salary, birth_date, gender, job_role, department, 
