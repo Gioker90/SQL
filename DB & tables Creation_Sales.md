@@ -63,7 +63,7 @@ INSERT INTO Stores (StoreID, location, Manager_First_Name, Manager_Last_Name, Ma
 (5, 'Rome, Italy', 'Chris', 'Brown', 5),
 -- other 5 rows
 ````
-
+#
 The 3rd table I'll create is called 'Employees' and it contatins employees information, included the ID of the direct supervior of every employee
 
 ````sql
