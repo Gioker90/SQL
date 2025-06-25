@@ -1,5 +1,5 @@
 # Data Exploration
-### Task: exploring the data from a previously created db [Company DB](https://github.com/Gioker90/SQL/blob/09327297583407521845952ada44ebb3c18d44cc/DB%20%26%20table%20creation.md) and performing some analysis on it
+### Task: exploring the data from a previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md) and performing some analysis on it
 
 - Looking for null or duplicate values
 
