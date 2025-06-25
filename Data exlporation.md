@@ -68,7 +68,7 @@ This will be the result
 
 ![Screenshot 2025-05-22 150353](https://github.com/user-attachments/assets/27c9bf42-5722-4f26-8f05-a47ba3f4f5d9)
 
-4.Using `CASE` to split the population by Seniority, calculated like the difference between today and the start date
+4.Using `CASE` to split the population by Seniority, calculated as the difference between today and the start date
 ```sql
 select
   CASE
@@ -85,7 +85,7 @@ This will be the result
 
 ![Screenshot 2025-05-22 143232](https://github.com/user-attachments/assets/34c2bc1a-3ea8-40be-98c2-5b56a86d5f47)
 
-5.Using `COUNT`, `GROUP BY`, `UNION` & `ORDER BY` to see how many people left the company. I want to see the information grouped by city and in alphabetic order, and I also qant to see the total leavers
+5.Using `COUNT`, `GROUP BY`, `UNION` & `ORDER BY` to see how many people left the company. I want to see the information grouped by city and in alphabetic order, and I also want to see the total leavers
 ```sql
 SELECT
   Location,
