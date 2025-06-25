@@ -23,7 +23,7 @@ CREATE TABLE Sales (
 );
 
 ````
-And then using `INSERT INTO` as follows, to populate thge table
+And then using `INSERT INTO` as follows, to populate the table
 
 ````sql
 INSERT INTO Sales (ID, SaleDate, Description, Amount, CustomerName, ProductID, Quantity, Discount, TotalAmount, Store_ID) VALUES
@@ -36,13 +36,13 @@ INSERT INTO Sales (ID, SaleDate, Description, Amount, CustomerName, ProductID, Q
 
 ````
 Result
-
+![Screenshot 2025-06-25 153756](https://github.com/user-attachments/assets/6de193bd-4ba3-421c-9c9c-1e49708446ab)
 
 
 
 #
 
-Now I'll create a second table, called "Stores", where I'll store the information about sotres location and store's Manager
+Now I'll create a second table, called "Stores", where I'll put the information about store's location and store's Manager
 ````sql
 CREATE table Stores(
   StoreID int primary key,
@@ -63,8 +63,11 @@ INSERT INTO Stores (StoreID, location, Manager_First_Name, Manager_Last_Name, Ma
 (5, 'Rome, Italy', 'Chris', 'Brown', 5),
 -- other 5 rows
 ````
+Result
+![Screenshot 2025-06-25 155407](https://github.com/user-attachments/assets/19d1d685-207d-4202-bd26-b21e04fc635e)
+
 #
-The 3rd table I'll create is called 'Employees' and it contatins employees information, included the ID of the direct supervior of every employee
+The 3rd table I'll create is called 'Employees' and it contains employeesì information, included the ID of the direct supervisor of every employee
 
 ````sql
 CREATE TABLE Employees (
@@ -88,3 +91,4 @@ INSERT INTO Employees (ID, First_Name, Last_Name, Supervisor_ID) VALUES
 
 Result
 
+![Screenshot 2025-06-25 155422](https://github.com/user-attachments/assets/6a74f212-6f68-47ed-a11e-9965d45ee505)
