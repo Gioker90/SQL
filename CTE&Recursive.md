@@ -1,46 +1,28 @@
 # Data Exploration
-### Task: exploring the data from a previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md) and performing some analysis on it
+### Task: performing advanced calculation on previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md) and performing some analysis on it
 
-- Looking for null or duplicate values
+Assuming that there is no duplicates value in our tables, I perform some CTEs on the data contained in the three tables
 
-1.Using `COUNT` & `IS NULL` to look for null values in the ID column
+1. Using CTE to calculate the average os a sum. In this case I use the inner query to calculate the revenues of every store, and the outer query to know the average revenues across all the stores
 
 ```sql
-SELECT
-  COUNT(*) as 'Count of IDs'
-FROM HC
-WHERE id IS NULL
+with temp as (
+  SELECT
+store_id,
+sum(totalamount) as revenue
+from Sales
+GROUP by store_id
+  )
+  SELECT
+  avg(revenue) as avg
+  from temp
 ```
-This will be the result: no null values
+Result
 
-![Screenshot 2025-05-22 120240](https://github.com/user-attachments/assets/13bdbf62-f56f-419e-a889-77fb82cc88cb)
+![Screenshot 2025-06-25 165911](https://github.com/user-attachments/assets/b9408747-a883-4d12-b819-91d5d346fc88)
 
-2.Using `COUNT` & `DISTINCT` to look for duplicate values in the ID column
-```sql
-SELECT
-  COUNT(*)-COUNT(DISTINCT(id)) as' N° of Duplicate values'
-FROM HC
-```
-This will be the result: no duplicates ID values
 
-![Screenshot 2025-05-22 121207](https://github.com/user-attachments/assets/d1e58b5f-374d-4231-b732-e84cefd67e6a)
-#
-
-- Let's do some calculation
-
-1.Using `AVG`, `ROUND` & `GROUP BY` to calculate average salary by Department
-```sql
-SELECT
-department,
-ROUND(AVG(salary),2) as 'Avg salary'
-FROM HC
-GROUP BY department
-```
-This will be the result
-
-![Screenshot 2025-05-22 144543](https://github.com/user-attachments/assets/f30959a2-10db-4ac9-af9e-1908a114aabe)
-
-2.Using `LIKE` to find employees whose last name start with "D" and that work in IT Department
+.Streo with >40000$ revenues and less than 5 employees
 ```sql
 SELECT
   first_name,
