@@ -1,5 +1,5 @@
 # Database and Table creation
-#### Task: In order to be able some complex queries as CTE and recursive queries, I will create a databse with 3 differnt tables, called 'Employees', 'Sales', and 'Stores'
+#### Task: In order to perform some complex queries such CTEs and recursive queries, I will create a database with 3 differnt tables, called 'Employees', 'Sales', and 'Stores'
 
 I'll firstly create a DB, using`CREATE DATABASE` and calling it "Company DB"
 ```sql
