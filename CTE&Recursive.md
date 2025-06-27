@@ -1,5 +1,5 @@
 # CTE&Recursive Queries
-### Task: performing advanced calculation on previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md)
+### Task: performing advanced calculations on previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md)
 
 Assuming that there is no duplicates value in our tables, I perform some CTEs on the data contained in the three tables
 
