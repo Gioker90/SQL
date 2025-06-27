@@ -3,7 +3,7 @@
 
 Assuming that there is no duplicates value in our tables, I perform some CTEs on the data contained in the three tables
 
-1. Using CTE to calculate the average of a sum. In this case I use the inner query to calculate the revenues of every store, and the outer query to know the average revenues across all the stores
+1. Using CTE to calculate the average of a sum. In this case I'll use the inner query to calculate the revenues of every store, and the outer query to know the average revenues across all the stores
 
 ```sql
 WITH temp as (
@@ -21,7 +21,8 @@ Result
 
 ![Screenshot 2025-06-25 165911](https://github.com/user-attachments/assets/b9408747-a883-4d12-b819-91d5d346fc88)
 
-2. In the previous query I used one CTE- I can use mulitple CTEs to select different groups of items. in this case, I use 2 CTEs to select stores that perfrom well, meaning with >30000 uniqe sale and with more than 4 sales done, and an outer query with `UNION` to see all the stores with these criteria in the same Column
+2. In the previous query I used one CTE. I can use mulitple CTEs to select different groups of items. In this case, I use 2 CTEs to select stores that perform well, meaning that made a sale of >30000 with more than 4 sales done.
+Then, I'll write the outer query with `UNION` clause to see all the stores with these criteria in the same Column
 
 ```sql
 WITH temp as (
@@ -54,7 +55,7 @@ Result
 ![Screenshot 2025-06-27 113257](https://github.com/user-attachments/assets/75ac1bbb-1e36-45dd-8f2e-fd5bebf2abeb)
 
 3. Now, to further analyze the best performing Stores, I want to select the ones that had bigger income than the average. In order to do that, I will use a nested CTE.
-With the first inner query I select the total income for every Store, than, with the nested query, I calculate the average income across all the Store.
+With the first inner query I select the total income for every Store, than, with the nested query, I calculate the average income across all the Stores.
 Finally, with the outer query I'll select the stores that earn more than the average, including both the previous CTEs in the `FROM` clause
 
 ```sql
@@ -79,6 +80,6 @@ SELECT
  location,
  Store_Revenues,
  Overall_avg
- FROM temp, temp1
- WHERE Store_Revenues > Overall_Avg
+FROM temp, temp1
+WHERE Store_Revenues > Overall_Avg
 ```
