@@ -54,7 +54,7 @@ Result
 
 ![Screenshot 2025-06-27 113257](https://github.com/user-attachments/assets/75ac1bbb-1e36-45dd-8f2e-fd5bebf2abeb)
 
-3. Now, to further analyze the best performing Stores, I want to select the ones that had bigger income than the average. In order to do that, I will use a nested CTE.
+3. Now, to further analyze the best performing Stores, I want to select the ones that had bigger incomes compared to the average. In order to do that, I will use a nested CTE.
    
 With the first inner query I select the total income for every Store, than, with the nested query, I calculate the average income across all the Stores.
 
@@ -89,15 +89,15 @@ Result
 
 ![Screenshot 2025-06-27 151044](https://github.com/user-attachments/assets/dead8a53-58b4-4e41-a3ae-0744a25cc126)
 
-4. In the company data I'm working with there is information reagrding employees and their supervisor. I'm therefore interested in see what's the hierarchicial structure of the company, possibly knowing the hierarchical chain for every employee.
+4. In the company data I'm working with there is information regarding employees and their supervisor. I'm therefore interested in see what's the hierarchicial structure of the company, possibly knowing the hierarchical chain for every employee (who's every employee's supervisor).
 
 What I'll do is to use a recursive query, using `WITH RECURSIVE` clause, in order to retrieve the entire company structure.
 
-The anchor member will be the CEO of the company, that has NULL Supervisor_ID, because he/she doesn't have a Supervisor.
+The anchor member will be represented by the CEO of the company, that has NULL Supervisor_ID, because he/she doesn't have a Supervisor.
 
-The recursive member will be the Last Name of the employee whose ID coincides with the supervisor_ID (termination check)
+The recursive member will be represented by the Last Name of the employee whose ID coincides with the supervisor_ID (termination check)
 
-The invocation will be represented by selecting all the columns in the recursive CTE, named 'Hierarchy'
+The invocation will be represented by selecting all the columns in the recursive CTE named 'Hierarchy'
 
 
 ```sql
