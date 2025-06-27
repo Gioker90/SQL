@@ -14,7 +14,7 @@ WITH temp as (
   GROUP by store_id
 )
 SELECT
-  AVG(revenue) as avg
+  AVG(revenue) as avg_revenues
 FROM temp
 ```
 Result
@@ -52,3 +52,33 @@ FROM temp1
 Result
 
 ![Screenshot 2025-06-27 113257](https://github.com/user-attachments/assets/75ac1bbb-1e36-45dd-8f2e-fd5bebf2abeb)
+
+3. Now, to further analyze the best performing Stores, I want to select the ones that had bigger income than the average. In order to do that, I will use a nested CTE.
+With the first inner query I select the total income for every Store, than, with the nested query, I calculate the average income across all the Store.
+Finally, with the outer query I'll select the stores that earn more than the average, including both the previous CTEs in the `FROM` clause
+
+```sql
+
+WITH temp as (
+ SELECT
+  S.StoreID,
+  location,
+  SUM(totalamount) as Store_Revenues
+ FROM Sales as S
+	JOIN Stores ON Stores.StoreID=S.StoreID
+ GROUP BY S.StoreID
+),
+
+ temp1 as (
+  SELECT
+   AVG(Store_Revenues) as Overall_Avg
+  FROM TEMP
+)
+
+SELECT
+ location,
+ Store_Revenues,
+ Overall_avg
+ FROM temp, temp1
+ WHERE Store_Revenues > Overall_Avg
+```
