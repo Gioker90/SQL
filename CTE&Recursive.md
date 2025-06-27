@@ -83,3 +83,6 @@ SELECT
 FROM temp, temp1
 WHERE Store_Revenues > Overall_Avg
 ```
+Result
+
+![Screenshot 2025-06-27 151044](https://github.com/user-attachments/assets/dead8a53-58b4-4e41-a3ae-0744a25cc126)
