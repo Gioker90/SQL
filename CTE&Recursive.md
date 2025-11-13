@@ -1,4 +1,20 @@
-# CTE&Recursive Queries
+# **Advanced SQL Analysis: CTE & Recursive Queries**
+
+## **Overview**
+This project demonstrates advanced SQL techniques to analyze company sales and organizational hierarchy using **Common Table Expressions (CTEs)** and **Recursive Queries**.
+
+**Tools Used:**  
+- SQL (PostgreSQL/MySQL)  
+- Dataset: [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md)
+- Which stores perform above average?
+- How can we identify top-performing stores based on multiple criteria?
+- What is the hierarchical structure of the company?
+
+---
+
+## **Key Queries**
+
+
 ### Task: performing advanced calculations on previously created db [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md)
 
 Assuming that there is no duplicates value in our tables, I perform some CTEs on the data contained in the three tables
