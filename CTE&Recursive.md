@@ -6,6 +6,8 @@ This project demonstrates advanced SQL techniques to analyze company sales and o
 **Tools Used:**  
 - SQL (PostgreSQL/MySQL)  
 - Dataset: [Company DB](https://github.com/Gioker90/SQL/blob/328f6cae24be7877e64e282a93f8b024b47ad4a2/DB%20%26%20tables%20Creation_Sales.md)
+
+**Business Questions:** 
 - Which stores perform above average?
 - How can we identify top-performing stores based on multiple criteria?
 - What is the hierarchical structure of the company?
