@@ -1,7 +1,24 @@
 # Data Exploration
-### Task: exploring the data from a previously created db [HC](https://github.com/Gioker90/SQL/blob/09327297583407521845952ada44ebb3c18d44cc/DB%20%26%20table%20creation.md) and performing some analysis on it
+### **Overview**: exploring the data from a previously created db [HC](https://github.com/Gioker90/SQL/blob/09327297583407521845952ada44ebb3c18d44cc/DB%20%26%20table%20creation.md) and performing some analysis on it
 
-- Looking for null or duplicate values
+**Tools Used:**  
+- SQL (PostgreSQL/MySQL)  
+- Dataset: [HC](https://github.com/Gioker90/SQL/blob/09327297583407521845952ada44ebb3c18d44cc/DB%20%26%20table%20creation.md)
+
+---
+
+## **Business Questions**
+- Are there any null or duplicate values in the dataset?
+- What is the average salary by department?
+- Which employees meet specific criteria (e.g., IT department, last name starts with “D”)?
+- How many employees left the company, and where?
+- Who earns less than the average salary in IT?
+
+---
+
+## **Key Queries**
+
+### 1. **Check for Null Values**
 
 1.Using `COUNT` & `IS NULL` to look for null values in the ID column
 
@@ -11,7 +28,7 @@ SELECT
 FROM HC
 WHERE id IS NULL
 ```
-This will be the result: no null values
+Insight: No null values found → dataset is clean.
 
 ![Screenshot 2025-05-22 120240](https://github.com/user-attachments/assets/13bdbf62-f56f-419e-a889-77fb82cc88cb)
 
@@ -21,7 +38,7 @@ SELECT
   COUNT(*)-COUNT(DISTINCT(id)) as' N° of Duplicate values'
 FROM HC
 ```
-This will be the result: no duplicates ID values
+Insight: No duplicate IDs → data integrity confirmed.
 
 ![Screenshot 2025-05-22 121207](https://github.com/user-attachments/assets/d1e58b5f-374d-4231-b732-e84cefd67e6a)
 #
@@ -36,7 +53,7 @@ ROUND(AVG(salary),2) as 'Avg salary'
 FROM HC
 GROUP BY department
 ```
-This will be the result
+Insight: L&D department has the highest average salary.
 
 ![Screenshot 2025-05-22 144543](https://github.com/user-attachments/assets/f30959a2-10db-4ac9-af9e-1908a114aabe)
 
@@ -49,7 +66,7 @@ FROM HC
 WHERE last_name LIKE ('D%') AND department='IT'
 ```
 
-This will be the result
+Insight: Found employees matching criteria.
 
 ![image](https://github.com/user-attachments/assets/fd71895a-a9c8-4f61-9d0a-11a468a71353)
 
@@ -64,7 +81,7 @@ WHERE (start_date BETWEEN '2016-01-01' AND '2020-31-12')
 	AND
 	attrition='No'
 ```
-This will be the result
+Insight: These employees represent stable workforce during that period.
 
 ![Screenshot 2025-05-22 150353](https://github.com/user-attachments/assets/27c9bf42-5722-4f26-8f05-a47ba3f4f5d9)
 
@@ -81,7 +98,7 @@ COUNT(*) as HC
 FROM HC
 GROUP BY Seniority
 ```
-This will be the result
+Insight: Majority of employees fall into Intermediate and Senior categories.
 
 ![Screenshot 2025-05-22 143232](https://github.com/user-attachments/assets/34c2bc1a-3ea8-40be-98c2-5b56a86d5f47)
 
@@ -103,7 +120,7 @@ FROM HC
 WHERE attrition='Yes'
 ORDER BY location ASC
 ```
-This will be the result: 4 leavers in 4 different citites
+Insight: 4 leavers across 4 different cities.
 
 ![Screenshot 2025-05-22 122519](https://github.com/user-attachments/assets/2121df1c-8c16-4857-a19f-39dfcbd1b7c3)
 
